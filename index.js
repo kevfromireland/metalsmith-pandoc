@@ -68,7 +68,6 @@ function plugin(options){
         }
         debug('Converted file %s. Converted: %s...', file, res.substring(0,10).replace('\n',''));
         data.contents = new Buffer(res);
-        delete files[file];
         files[html] = data;
         cb();
       });
